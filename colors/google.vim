@@ -21,13 +21,13 @@ let g:colors_name='google'
 let s:shade0  = { "gui": "#ffffff" }
 let s:shade1  = { "gui": "#f1f1f1" }
 let s:shade2  = { "gui": "#e1e1e1" }
-let s:shade3  = { "gui": "#999999" }
-let s:shade4  = { "gui": "#333333" }
+let s:shade3  = { "gui": "#969896" }
+let s:shade4  = { "gui": "#1d1f21" }
 " darkest
 
-let s:red     = { "gui": "#cc342b" }
-let s:yellow  = { "gui": "#fba922" }
-let s:blue    = { "gui": "#3971ed" }
+let s:red     = { "gui": "#ea4335" }
+let s:yellow  = { "gui": "#fbbc05" }
+let s:blue    = { "gui": "#4285f4" }
 
 function! s:h(group, style)
   execute "highlight" a:group
@@ -105,8 +105,8 @@ call s:h("Folded",        {"fg": s:shade4, "bg": s:shade1})
 call s:h("FoldColumn",    {"fg": s:shade3})
 call s:h("DiffAdd",       {"fg": s:blue})
 call s:h("DiffDelete",    {"fg": s:red})
-call s:h("DiffChange",    {"fg": s:yellow})
-call s:h("DiffText",      {"fg": s:shade4})
+call s:h("DiffChange",    {"fg": s:shade4})
+call s:h("DiffText",      {"fg": s:red})
 call s:h("DiffFile",      {"fg": s:shade4, "gui": "underline"})
 call s:h("SignColumn",    {"fg": s:shade4})
 
@@ -121,7 +121,7 @@ call s:h("CursorColumn",  {"fg": s:shade4})
 call s:h("CursorLine",    {"fg": s:shade4})
 call s:h("ColorColumn",   {"fg": s:shade4})
 
-call s:h("MatchParen",    {"fg": s:yellow})
+call s:h("MatchParen",    {"fg": s:blue})
 call s:h("qfLineNr",      {"fg": s:shade4})
 call s:h("QuickFixLine",  {"bg": s:shade1})
 
