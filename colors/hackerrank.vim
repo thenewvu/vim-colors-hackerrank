@@ -1,7 +1,9 @@
-" Name:       google.vim
+" Name:       hackerrank.vim
 " Version:    0.1
 " Maintainer: github.com/thenewvu
 " License:    The MIT License (MIT)
+" 
+" Inpired by https://www.youtube.com/watch?v=shs0KM3wKv8
 "
 " A lot of works come from:
 " https://github.com/noahfrederick/vim-hemisu/
@@ -15,7 +17,7 @@ if exists('syntax on')
   syntax reset
 endif
 
-let g:colors_name='google'
+let g:colors_name='hackerrank'
 
 if &background == "dark"
   " darkest
