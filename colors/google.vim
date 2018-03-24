@@ -17,17 +17,27 @@ endif
 
 let g:colors_name='google'
 
-" lightest
-let s:shade0  = { "gui": "#ffffff" }
-let s:shade1  = { "gui": "#f1f1f1" }
-let s:shade2  = { "gui": "#e1e1e1" }
-let s:shade3  = { "gui": "#969896" }
-let s:shade4  = { "gui": "#1d1f21" }
-" darkest
+if &background == "dark"
+  " darkest
+  let s:shade0  = { "gui": "#010001" }
+  let s:shade1  = { "gui": "#1a191a" }
+  let s:shade2  = { "gui": "#333233" }
+  let s:shade3  = { "gui": "#666666" }
+  let s:shade4  = { "gui": "#F1EFF1" }
+  " lightest
+else
+  " lightest
+  let s:shade0  = { "gui": "#ffffff" }
+  let s:shade1  = { "gui": "#f1f1f1" }
+  let s:shade2  = { "gui": "#e1e1e1" }
+  let s:shade3  = { "gui": "#969896" }
+  let s:shade4  = { "gui": "#1d1f21" }
+  " darkest
+endif
 
-let s:red     = { "gui": "#ea4335" }
-let s:yellow  = { "gui": "#fbbc05" }
-let s:blue    = { "gui": "#4285f4" }
+let s:red     = { "gui": "#E365AA" }
+let s:yellow  = { "gui": "#F8D561" }
+let s:blue    = { "gui": "#3C8EDF" }
 
 function! s:h(group, style)
   execute "highlight" a:group
@@ -93,15 +103,15 @@ call s:h("ModeMsg",       {"fg": s:shade3})
 call s:h("LineNr",        {"fg": s:shade2})
 call s:h("CursorLineNr",  {"fg": s:shade4})
 call s:h("Question",      {"fg": s:shade4})
-call s:h("StatusLine",    {"fg": s:shade3, "bg": s:shade2})
-call s:h("StatusLineNC",  {"fg": s:shade3, "bg": s:shade2})
+call s:h("StatusLine",    {"fg": s:shade3, "bg": s:shade1})
+call s:h("StatusLineNC",  {"fg": s:shade3, "bg": s:shade1})
 call s:h("VertSplit",     {"fg": s:shade3})
 call s:h("Title",         {"fg": s:shade3})
 call s:h("Visual",        {"bg": s:shade1})
 call s:h("VisualNOS",     {"bg": s:shade1})
 call s:h("WarningMsg",    {"fg": s:shade4})
 call s:h("WildMenu",      {"fg": s:shade4, "bg": s:shade2})
-call s:h("Folded",        {"fg": s:shade4, "bg": s:shade1})
+call s:h("Folded",        {"fg": s:shade4})
 call s:h("FoldColumn",    {"fg": s:shade3})
 call s:h("DiffAdd",       {"fg": s:blue})
 call s:h("DiffDelete",    {"fg": s:red})
@@ -114,9 +124,9 @@ call s:h("Pmenu",         {"fg": s:shade3, "bg": s:shade2})
 call s:h("PmenuSel",      {"fg": s:shade4, "bg": s:shade2})
 call s:h("PmenuSbar",     {"fg": s:shade4, "bg": s:shade2})
 call s:h("PmenuThumb",    {"fg": s:shade4, "bg": s:shade2})
-call s:h("TabLine",       {"fg": s:shade3, "bg": s:shade2})
-call s:h("TabLineSel",    {"fg": s:shade4, "bg": s:shade2})
-call s:h("TabLineFill",   {"fg": s:shade3, "bg": s:shade2})
+call s:h("TabLine",       {"fg": s:shade3, "bg": s:shade1})
+call s:h("TabLineSel",    {"fg": s:shade4, "bg": s:shade1})
+call s:h("TabLineFill",   {"fg": s:shade3, "bg": s:shade1})
 call s:h("CursorColumn",  {"fg": s:shade4})
 call s:h("CursorLine",    {"fg": s:shade4})
 call s:h("ColorColumn",   {"fg": s:shade4})
