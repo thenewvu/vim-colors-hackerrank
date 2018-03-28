@@ -19,6 +19,10 @@ endif
 
 let g:colors_name='hackerrank'
 
+if ! exists("g:hackerrank_transparent")
+  let g:hackerrank_transparent = 0
+endif
+
 if &background == "dark"
   " darkest
   let s:shade0  = { "gui": "#010001" }
@@ -50,7 +54,11 @@ function! s:h(group, style)
 endfunction
 
 " primitive syntaxs
-call s:h("Normal",        {"fg": s:shade4, "bg": s:shade0})
+if g:hackerrank_transparent == 1
+  call s:h("Normal",        {"fg": s:shade4})
+else
+  call s:h("Normal",        {"fg": s:shade4, "bg": s:shade0})
+endif
 call s:h("Comment",       {"fg": s:shade3, "gui": "italic"})
 call s:h("Cursor",        {"gui": "standout"})
 
